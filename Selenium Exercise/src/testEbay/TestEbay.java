@@ -30,7 +30,7 @@ public class TestEbay {
 		driver.navigate().to(baseUrl);
 		Thread.sleep(2000);
 		driver.findElement(By.cssSelector(".gLFyf")).sendKeys(searchFor);
-		driver.findElement(By.cssSelector(".FPdoLc > center:nth-child(1) > input:nth-child(1)")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]")).click();
 	}
 	
 	//Go to Sign In page, set username and passoword and click the  "Sign In" button

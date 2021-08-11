@@ -1,4 +1,4 @@
-// Suraweera S.M.H.M.
+// Suraweera S.M.H.M. | used xpaths
 
 package testGmail;
 import static org.testng.Assert.assertTrue;
@@ -30,7 +30,7 @@ public class TestGmail {
 		driver.navigate().to(baseUrl);
 		Thread.sleep(2000);
 		driver.findElement(By.cssSelector(".gLFyf")).sendKeys(searchFor);
-		driver.findElement(By.cssSelector(".FPdoLc > center:nth-child(1) > input:nth-child(1)")).click();
+		driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]")).click();
 	}
 	
 	//Go to Sign In page, set username and passoword and click the  "Sign In" button
@@ -42,12 +42,12 @@ public class TestGmail {
 		driver.findElement(By.cssSelector(".header__aside__nav > li:nth-child(2) > a:nth-child(1)")).click();
 		
 		
-		driver.findElement(By.cssSelector("#identifierId")).sendKeys(username);
-		driver.findElement(By.cssSelector(".VfPpkd-LgbsSe-OWXEXe-k8QpJ")).click();
+		driver.findElement(By.xpath("//input[@id='identifierId']")).sendKeys(username);
+		driver.findElement(By.xpath("//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc lw1w4b']")).click();
 		Thread.sleep(3000);
 		
-		driver.findElement(By.cssSelector("#password > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > input:nth-child(1)")).sendKeys(password);
-		driver.findElement(By.cssSelector(".VfPpkd-LgbsSe-OWXEXe-k8QpJ > span:nth-child(3)")).click();
+		driver.findElement(By.xpath("//input[@class='whsOnd zHQkBf' and  @type='password']")).sendKeys(password);
+		driver.findElement(By.xpath("//button[@class='VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc qIypjc TrZEUc lw1w4b']")).click();
 		
 	}
 	
