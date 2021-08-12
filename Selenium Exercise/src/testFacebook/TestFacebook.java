@@ -31,8 +31,8 @@ public class TestFacebook {
 		
 		driver.navigate().to(baseUrl);
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector(".gLFyf")).sendKeys(searchFor);
-		driver.findElement(By.cssSelector(".FPdoLc > center:nth-child(1) > input:nth-child(1)")).click();
+		driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys(searchFor);
+		driver.findElement(By.xpath("//div[@class='FPdoLc lJ9FBc']/center/input[@class='gNO89b']")).click();
 	}
 	
 	//Set username and passoword and click the  "Sign In" button
@@ -40,12 +40,12 @@ public class TestFacebook {
 	public void tryToSignIn() throws InterruptedException {
 		
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector(".eKjLze > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > h3:nth-child(2)")).click();
+		driver.findElement(By.xpath("//h3[@class='LC20lb DKV0Md' and contains(text(),'Facebook - Log In or Sign Up')]")).click();
 		Thread.sleep(2000);
 		
-		driver.findElement(By.cssSelector("#email")).sendKeys(username);
-		driver.findElement(By.cssSelector("#pass")).sendKeys(password);
-		driver.findElement(By.cssSelector("div._6ltg:nth-child(6)")).click();
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys(username);
+		driver.findElement(By.xpath("//input[@id='pass']")).sendKeys(password);
+		driver.findElement(By.xpath("//div[@class='_6ltg']/button")).click();
 	}
 	
 	//Compare the actual title of the page with the expected title
